@@ -1,0 +1,2 @@
+# Upload/sync /shared/html/wp-content to S3 Bucket once an hour
+0 */1 * * * /shared/scripts/aws_s3_upload.sh >> /var/log/cron.log 2>&1

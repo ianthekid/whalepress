@@ -1,0 +1,8 @@
+#update_status {
+  width: 100%;
+  display: block;
+  min-height: 300px;
+}
+table td {
+  vertical-align: middle !important;
+}
