@@ -105,7 +105,7 @@ class WhalePress_Scripts {
       <section class="row mt-5 mx-1">
         <!-- AJAX results from Bash Scripts -->
         <h4>Shell Console Output</h4>
-        <code id="update_status" class="p-3 mt-3 mr-3"></code>
+        <code id="update_status" class="p-3 mt-3 mr-3 rounded"></code>
       </section>
     </div>
 
@@ -128,11 +128,11 @@ class WhalePress_Scripts {
         <?=ABSPATH .' .env'; ?>
       </div>
 
-      <code class="w-100 p-3 mt-2 mr-3">
+      <code class="w-100 p-3 mt-2 mr-3 rounded bg-dark">
       <?php
         $env_vars = ['SITEURL', 'DOMAIN', 'THEME_REPO', 'THEME_NAME', 'BUILD_CMD', 'AWS_KEY', 'AWS_SECRET', 'AWS_REGION', 'S3BUCKET', 'DB_HOST', 'DB_INSTANCE', 'DB_NAME', 'DB_USER', 'DB_PASS', 'WP_TITLE', 'WP_USER', 'WP_PASS', 'WP_EMAIL'];
         foreach($env_vars as $var) 
-          echo "$var=$_ENV[$var]<br/>";
+          echo "<var>$var=</var>$_ENV[$var]<br/>";
       ?>
       </code>
 

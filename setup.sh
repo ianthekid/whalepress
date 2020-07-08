@@ -24,6 +24,7 @@ if [ -z $DB_HOST ]
 then
   echo "Creating AWS RDS database in Region: $AWS_REGION"
   ./setup/database.sh
+  echo "Creating a new instance may take a while to provision (5mins+)..."
   #re-import .env vars for DB_HOST
   set -o allexport; source .env; set +o allexport
 fi

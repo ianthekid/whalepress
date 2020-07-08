@@ -41,7 +41,10 @@ class WhalePress {
    * Admin AJAX callback - run bash scripts via shell_exec()
    */
   function whalepress_scripts() {
+    //Log the last time trigger is run
     update_option( 'whalepress_'.$_REQUEST['trigger'], time() );
+
+    //Run bash script and return shell output
     $cmd = $this->docker .'/' .$_REQUEST['script'];
     echo shell_exec($cmd.' 2>&1');
     //Always die in functions echoing ajax content
@@ -78,6 +81,5 @@ class WhalePress {
     }
     return self::$_instance;
   } // End instance ()
-
 
 }
