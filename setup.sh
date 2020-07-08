@@ -31,6 +31,7 @@ fi
 # WordPress Core + wp-config.php settings
 echo "Install WordPress core and define wp-config.php parameters"
 ./setup/wordpress.sh
+cp .env ./wordpress
 
 # Headless Theme and wpgraphql plugins
 echo "Set themes/plugins"

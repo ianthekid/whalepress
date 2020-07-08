@@ -36,5 +36,4 @@ RUN chmod +x /shared/scripts/*.sh
 
 # WWW assets
 COPY ./wordpress /shared/html
-COPY .env /shared/html
 RUN chown -R www-data:www-data /shared/html

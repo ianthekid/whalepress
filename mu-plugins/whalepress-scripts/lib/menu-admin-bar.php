@@ -5,8 +5,8 @@ add_action( 'wp_before_admin_bar_render', function() {
 
   // generate parent node
   $args_parent = array(
-    'id' => 'headlessMenu',
-    'title' => 'HeadlessWP'
+    'id' => 'whalepress',
+    'title' => 'WhalePress'
   );
   $wp_admin_bar->add_node( $args_parent );
 
@@ -15,17 +15,17 @@ add_action( 'wp_before_admin_bar_render', function() {
       'id'=>'awsUpdate',
       'title'=>'S3 Update',
       'href' => get_template_directory_uri().'/script.php?sh=aws_s3_upload',
-      'parent'=>'headlessMenu'
+      'parent'=>'whalepress'
     ], [
       'id'=>'themeUpdate',
       'title'=>'Update Theme',
       'href' => get_template_directory_uri().'/script.php?sh=theme_update',
-      'parent'=>'headlessMenu'
+      'parent'=>'whalepress'
     ], [
         'id'=>'another',
         'title'=>'Loaded works',
         'href' => get_template_directory_uri().'/script.php?sh=another',
-        'parent'=>'headlessMenu'
+        'parent'=>'whalepress'
   ]];
 
   foreach($menu_nodes as $node) {

@@ -12,7 +12,7 @@ echo "========================="
 git pull $THEME_REPO
 echo "========================="
 
-echo "chown ownership www-data"
+echo "chown ownership www-data:www-data /shared/html/wp-content/themes/$THEME_NAME"
 chown -R www-data:www-data .
 
 if [ ! -z $BUILD_CMD ]
